@@ -9,8 +9,18 @@
 import UIKit
 import Foundation
 import Moya
+import MBProgressHUD
 
-let DouBanProvider = MoyaProvider<DouBan>()
+
+//MARK:监听网络的状态
+let networkPlugin = NetworkActivityPlugin { (type, typ) in
+    switch type {
+    case .began:
+        MBProgressHUD.showAdded(to: UIApplication.shared.keyWindow!, animated: true)
+    case .ended:
+        MBProgressHUD.hide(for:  UIApplication.shared.keyWindow!, animated: true)
+    }
+}
 
 //请求分类
 public enum DouBan {
@@ -37,7 +47,6 @@ extension DouBan: TargetType {
     public var method: Moya.Method {
         return .get
     }
-    
     
     public var task: Task {
         switch self {
@@ -73,6 +82,8 @@ extension DouBan: TargetType {
         return false
     }
 }
+
+let DouBanProvider = MoyaProvider<DouBan>(plugins:[networkPlugin])
 
 class net: NSObject {
 

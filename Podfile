@@ -12,4 +12,6 @@ pod 'HandyJSON'  #字典转模型,阿里的
 pod 'AlamofireImage'  #加载图片,类似SD
 pod 'SnapKit'        #布局
 
+pod 'MBProgressHUD'
+
 end
