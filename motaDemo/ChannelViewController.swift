@@ -10,6 +10,7 @@ import UIKit
 import SwiftyJSON
 import HandyJSON
 import AlamofireImage
+import SnapKit
 
 
 class singersSubject: HandyJSON {
@@ -57,10 +58,28 @@ class ChannelViewController: UIViewController {
     }
     
     func createUI() {
-
-        self.imageView = UIImageView.init(frame: CGRect(x: 0, y: 64, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.width))
-        self.imageView.contentMode = UIViewContentMode.scaleAspectFit
+        self.imageView = UIImageView.init()
         self.view.addSubview(self.imageView)
+        self.imageView.snp.makeConstraints { (make) in
+            make.top.equalTo(self.view).offset(64)
+            make.left.equalTo(self.view).offset(0)
+            make.width.height.equalTo(UIScreen.main.bounds.size.width)
+        }
+        self.imageView.contentMode = UIViewContentMode.scaleAspectFill
+        
+        let button = UIButton.init()
+        self.view.addSubview(button)
+        button.snp.makeConstraints { (make) in
+            make.left.equalTo(self.view).offset(30)
+            make.top.equalTo(self.imageView.snp.bottom).offset(20)
+            make.width.height.equalTo(60)
+        }
+        button.setTitle("▶️", for: .normal)
+        button.addTarget(self, action: #selector(buttonClick), for: .touchUpInside)
+    }
+    
+    @objc func buttonClick() {
+        print("播放")
     }
     
     //MRAK:网络请求

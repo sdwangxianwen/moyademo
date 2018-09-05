@@ -10,5 +10,6 @@ pod 'Moya'       #网络请求
 pod 'SwiftyJSON' #数据序列化
 pod 'HandyJSON'  #字典转模型,阿里的
 pod 'AlamofireImage'  #加载图片,类似SD
+pod 'SnapKit'        #布局
 
 end
