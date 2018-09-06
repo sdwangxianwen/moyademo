@@ -8,6 +8,8 @@
 
 import UIKit
 
+
+
 class channelModel: NSObject {
    @objc var channel_id : String?
    @objc var name       :String?

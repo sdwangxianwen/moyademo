@@ -75,21 +75,18 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         self.arrM = NSMutableArray(array: []) //初始化可变数组
         self.isAfn = false
         self.initTableView()
-//        self.networking()
     }
     
     @objc func afnNetWork() {
-        MBProgressHUD.showAdded(to: self.view, animated: true)
-        PPNetworkHelper.post("https://www.douban.com/j/app/radio/channels", parameters: nil, success: { (response) in
-           let response = response as! NSDictionary
+        
+        networkManager.default.request(url:频道 , parm: [:], success: { (response) in
+            let response = response as! NSDictionary
             let arr = NSArray.yy_modelArray(with: channelModel.self, json: response["channels"] as! [channelModel])
             print(arr as Any)
             self.arrM.removeAllObjects()
             self.isAfn = true
             self.arrM.addObjects(from: arr!)
             self.tableview.reloadData()
-            MBProgressHUD.hide(for: self.view, animated: true)
-            
         }) { (error) in
             
         }
