@@ -53,7 +53,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         } else {
             let channelModel  = self.arrM[indexPath.row] as! Subject;
             cell.textLabel?.text = channelModel.name
-            cell.backgroundColor = UIColor.white
+            cell.backgroundColor = hexColor(hex: 0xffbb33)
         }
        
         return cell

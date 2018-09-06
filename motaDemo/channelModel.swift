@@ -9,7 +9,7 @@
 import UIKit
 
 
-
+//频道的模型参数,需要添加@objc修饰
 class channelModel: NSObject {
    @objc var channel_id : String?
    @objc var name       :String?

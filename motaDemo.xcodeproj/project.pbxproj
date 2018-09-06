@@ -17,7 +17,7 @@
 		21A02C44213FA6DB00E3018F /* ChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A02C43213FA6DB00E3018F /* ChannelViewController.swift */; };
 		21A02C522140BBF300E3018F /* channelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A02C512140BBF300E3018F /* channelModel.swift */; };
 		21A02C542140C48700E3018F /* networkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A02C532140C48700E3018F /* networkManager.swift */; };
-		21A02C562140D58E00E3018F /* parameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A02C552140D58E00E3018F /* parameter.swift */; };
+		21A02C582140D99000E3018F /* comman.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A02C572140D98F00E3018F /* comman.swift */; };
 		CE3E605C7F59BE7A19F17D09 /* Pods_motaDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BEA785AADD33AFD136817A9 /* Pods_motaDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,7 +36,7 @@
 		21A02C49213FD07E00E3018F /* motaDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "motaDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		21A02C512140BBF300E3018F /* channelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = channelModel.swift; sourceTree = "<group>"; };
 		21A02C532140C48700E3018F /* networkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = networkManager.swift; sourceTree = "<group>"; };
-		21A02C552140D58E00E3018F /* parameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = parameter.swift; sourceTree = "<group>"; };
+		21A02C572140D98F00E3018F /* comman.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = comman.swift; sourceTree = "<group>"; };
 		37E7D9887740122C8AE869F2 /* Pods-motaDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-motaDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-motaDemo/Pods-motaDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		A1CA3A74B5A91A8BD6E42A09 /* Pods-motaDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-motaDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-motaDemo/Pods-motaDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -75,10 +75,10 @@
 			isa = PBXGroup;
 			children = (
 				21A02C2C213F729500E3018F /* AppDelegate.swift */,
+				21A02C572140D98F00E3018F /* comman.swift */,
 				21A02C2E213F729500E3018F /* ViewController.swift */,
 				21A02C512140BBF300E3018F /* channelModel.swift */,
 				21A02C532140C48700E3018F /* networkManager.swift */,
-				21A02C552140D58E00E3018F /* parameter.swift */,
 				21A02C43213FA6DB00E3018F /* ChannelViewController.swift */,
 				21A02C41213F737700E3018F /* net.swift */,
 				21A02C30213F729500E3018F /* Main.storyboard */,
@@ -243,10 +243,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21A02C582140D99000E3018F /* comman.swift in Sources */,
 				21A02C35213F729500E3018F /* motaDemo.xcdatamodeld in Sources */,
 				21A02C522140BBF300E3018F /* channelModel.swift in Sources */,
 				21A02C2F213F729500E3018F /* ViewController.swift in Sources */,
-				21A02C562140D58E00E3018F /* parameter.swift in Sources */,
 				21A02C2D213F729500E3018F /* AppDelegate.swift in Sources */,
 				21A02C42213F737700E3018F /* net.swift in Sources */,
 				21A02C44213FA6DB00E3018F /* ChannelViewController.swift in Sources */,

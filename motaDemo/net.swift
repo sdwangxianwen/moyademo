@@ -4,7 +4,7 @@
 //
 //  Created by wang on 2018/9/5.
 //  Copyright © 2018年 wang. All rights reserved.
-//
+//moya的网络请求参数设置
 
 import UIKit
 import Foundation

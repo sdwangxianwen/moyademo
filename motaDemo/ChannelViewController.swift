@@ -4,7 +4,7 @@
 //
 //  Created by wang on 2018/9/5.
 //  Copyright © 2018年 wang. All rights reserved.
-//
+//完全使用moya请求的,对于复杂一点的字典转模型,handjson就有点不好用了,需要手动写各种参数
 
 import UIKit
 import SwiftyJSON
