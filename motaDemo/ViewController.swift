@@ -80,16 +80,18 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     
     @objc func afnNetWork() {
         //基于afn封装的PPNETWORK,和OC用法一样,字典转模型用的YYMODEL
-        networkManager.default.request(url:频道 , parm: [:], success: { (response) in
+
+        let dict : NSDictionary = ["gender" : 1, "since" : 0,"new_device" : false]
+        networkManager.default.request(url:频道 , parm: dict , success: { (response) in
+            print(response as Any)
             let response = response as! NSDictionary
-            let arr = NSArray.yy_modelArray(with: channelModel.self, json: response["channels"] as! [channelModel])
-            print(arr as Any)
-            self.arrM.removeAllObjects()
-            self.isAfn = true
-            self.arrM.addObjects(from: arr!)
-            self.tableview.reloadData()
-        }) { (error) in
+            let data = response["data"] as! NSDictionary
+            let arr = NSArray.yy_modelArray(with: kkModel.self, json: data["comics"] as Any) as! [kkModel]
+            let mdel = arr.first
+            print(mdel?.topic?.cover_image_url as Any)
             
+        }) { (error) in
+
         }
     }
     @objc func moyaNet()  {

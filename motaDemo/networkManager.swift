@@ -20,10 +20,12 @@ class networkManager {
     ///   - parm: 请求的参数
     ///   - success: 成功的回调
     ///   - failure: 失败的回调
-    func request(url:String,parm:[String:Any],success: @escaping (Any?) -> (),failure: @escaping (Error?) -> ()) {
+    func request(url:String,parm:Any,success: @escaping (Any?) -> (),failure: @escaping (Error?) -> ()) {
         let url = HOSTAPI.appending(url)
-        MBProgressHUD.showAdded(to: UIApplication.shared.keyWindow!, animated: true)
-        PPNetworkHelper.post(url, parameters: parm, success: { (response) in
+
+//        MBProgressHUD.showAdded(to: UIApplication.shared.keyWindow!, animated: true)
+        
+        PPNetworkHelper.get(url, parameters: parm, success: { (response) in
             success(response)
             MBProgressHUD.hide(for: UIApplication.shared.keyWindow!, animated: true)
         }) { (error) in

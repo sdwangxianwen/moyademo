@@ -16,8 +16,8 @@ let KScreenWidth = UIScreen.main.bounds.size.width;
 let KScreenHeight = UIScreen.main.bounds.size.height;
 
 //相当于OC中的宏,可以使用汉字
-public let 频道 = "j/app/radio/channels"
-public let HOSTAPI = "https://www.douban.com/"
+public let 频道 = "v1/daily/comic_lists/0"
+public let HOSTAPI = "https://api.kkmh.com/"
 
 ///返回一个颜色
 

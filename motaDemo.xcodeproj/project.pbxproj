@@ -18,6 +18,7 @@
 		21A02C522140BBF300E3018F /* channelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A02C512140BBF300E3018F /* channelModel.swift */; };
 		21A02C542140C48700E3018F /* networkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A02C532140C48700E3018F /* networkManager.swift */; };
 		21A02C582140D99000E3018F /* comman.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A02C572140D98F00E3018F /* comman.swift */; };
+		21A02C5A21413CA700E3018F /* kkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A02C5921413CA700E3018F /* kkModel.swift */; };
 		CE3E605C7F59BE7A19F17D09 /* Pods_motaDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BEA785AADD33AFD136817A9 /* Pods_motaDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		21A02C512140BBF300E3018F /* channelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = channelModel.swift; sourceTree = "<group>"; };
 		21A02C532140C48700E3018F /* networkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = networkManager.swift; sourceTree = "<group>"; };
 		21A02C572140D98F00E3018F /* comman.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = comman.swift; sourceTree = "<group>"; };
+		21A02C5921413CA700E3018F /* kkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kkModel.swift; sourceTree = "<group>"; };
 		37E7D9887740122C8AE869F2 /* Pods-motaDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-motaDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-motaDemo/Pods-motaDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		A1CA3A74B5A91A8BD6E42A09 /* Pods-motaDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-motaDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-motaDemo/Pods-motaDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -77,10 +79,11 @@
 				21A02C2C213F729500E3018F /* AppDelegate.swift */,
 				21A02C572140D98F00E3018F /* comman.swift */,
 				21A02C2E213F729500E3018F /* ViewController.swift */,
-				21A02C512140BBF300E3018F /* channelModel.swift */,
 				21A02C532140C48700E3018F /* networkManager.swift */,
+				21A02C512140BBF300E3018F /* channelModel.swift */,
 				21A02C43213FA6DB00E3018F /* ChannelViewController.swift */,
 				21A02C41213F737700E3018F /* net.swift */,
+				21A02C5921413CA700E3018F /* kkModel.swift */,
 				21A02C30213F729500E3018F /* Main.storyboard */,
 				21A02C36213F729600E3018F /* Assets.xcassets */,
 				21A02C38213F729600E3018F /* LaunchScreen.storyboard */,
@@ -247,6 +250,7 @@
 				21A02C35213F729500E3018F /* motaDemo.xcdatamodeld in Sources */,
 				21A02C522140BBF300E3018F /* channelModel.swift in Sources */,
 				21A02C2F213F729500E3018F /* ViewController.swift in Sources */,
+				21A02C5A21413CA700E3018F /* kkModel.swift in Sources */,
 				21A02C2D213F729500E3018F /* AppDelegate.swift in Sources */,
 				21A02C42213F737700E3018F /* net.swift in Sources */,
 				21A02C44213FA6DB00E3018F /* ChannelViewController.swift in Sources */,
