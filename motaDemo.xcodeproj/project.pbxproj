@@ -15,6 +15,7 @@
 		21A02C3A213F729600E3018F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21A02C38213F729600E3018F /* LaunchScreen.storyboard */; };
 		21A02C42213F737700E3018F /* net.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A02C41213F737700E3018F /* net.swift */; };
 		21A02C44213FA6DB00E3018F /* ChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A02C43213FA6DB00E3018F /* ChannelViewController.swift */; };
+		21A02C522140BBF300E3018F /* channelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A02C512140BBF300E3018F /* channelModel.swift */; };
 		CE3E605C7F59BE7A19F17D09 /* Pods_motaDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BEA785AADD33AFD136817A9 /* Pods_motaDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		21A02C41213F737700E3018F /* net.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = net.swift; sourceTree = "<group>"; };
 		21A02C43213FA6DB00E3018F /* ChannelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelViewController.swift; sourceTree = "<group>"; };
 		21A02C49213FD07E00E3018F /* motaDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "motaDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		21A02C512140BBF300E3018F /* channelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = channelModel.swift; sourceTree = "<group>"; };
 		37E7D9887740122C8AE869F2 /* Pods-motaDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-motaDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-motaDemo/Pods-motaDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		A1CA3A74B5A91A8BD6E42A09 /* Pods-motaDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-motaDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-motaDemo/Pods-motaDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -70,6 +72,7 @@
 			children = (
 				21A02C2C213F729500E3018F /* AppDelegate.swift */,
 				21A02C2E213F729500E3018F /* ViewController.swift */,
+				21A02C512140BBF300E3018F /* channelModel.swift */,
 				21A02C43213FA6DB00E3018F /* ChannelViewController.swift */,
 				21A02C41213F737700E3018F /* net.swift */,
 				21A02C30213F729500E3018F /* Main.storyboard */,
@@ -176,25 +179,33 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-motaDemo/Pods-motaDemo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/PPNetworkHelper/PPNetworkHelper.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/YYCache/YYCache.framework",
+				"${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HandyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PPNetworkHelper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYCache.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYModel.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -227,6 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				21A02C35213F729500E3018F /* motaDemo.xcdatamodeld in Sources */,
+				21A02C522140BBF300E3018F /* channelModel.swift in Sources */,
 				21A02C2F213F729500E3018F /* ViewController.swift in Sources */,
 				21A02C2D213F729500E3018F /* AppDelegate.swift in Sources */,
 				21A02C42213F737700E3018F /* net.swift in Sources */,

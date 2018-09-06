@@ -9,6 +9,9 @@
 import UIKit
 import SwiftyJSON
 import HandyJSON
+import PPNetworkHelper
+import YYModel
+import MBProgressHUD
 
 class Subject: HandyJSON {
     var channel_id : String?
@@ -30,6 +33,8 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     //MARK:定义参数
     var tableview :UITableView! //tableview
     var arrM : NSMutableArray!  //存放数据源的可变数组
+    var isAfn : Bool!
+    
     
     //MARK:tableview的代理方法和数据源方法
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -40,8 +45,17 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         let identify:String = "SwiftCell"
         let cell = tableView.dequeueReusableCell(
             withIdentifier: identify, for: indexPath)
-        let channelModel  = self.arrM[indexPath.row] as! Subject;
-        cell.textLabel?.text = channelModel.name
+        if self.isAfn {
+            let channelModel = self.arrM[indexPath.row] as! channelModel
+            cell.textLabel?.text = channelModel.name
+            cell.backgroundColor = UIColor.brown
+            
+        } else {
+            let channelModel  = self.arrM[indexPath.row] as! Subject;
+            cell.textLabel?.text = channelModel.name
+            cell.backgroundColor = UIColor.white
+        }
+       
         return cell
     }
     
@@ -55,8 +69,32 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "AFN请求", style: .done, target: self, action: #selector(afnNetWork))
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(title: "MOYA请求", style: .done, target: self, action: #selector(moyaNet))
+        
         self.arrM = NSMutableArray(array: []) //初始化可变数组
+        self.isAfn = false
         self.initTableView()
+//        self.networking()
+    }
+    
+    @objc func afnNetWork() {
+        MBProgressHUD.showAdded(to: self.view, animated: true)
+        PPNetworkHelper.post("https://www.douban.com/j/app/radio/channels", parameters: nil, success: { (response) in
+           let response = response as! NSDictionary
+            let arr = NSArray.yy_modelArray(with: channelModel.self, json: response["channels"] as! [channelModel])
+            print(arr as Any)
+            self.arrM.removeAllObjects()
+            self.isAfn = true
+            self.arrM.addObjects(from: arr!)
+            self.tableview.reloadData()
+            MBProgressHUD.hide(for: self.view, animated: true)
+            
+        }) { (error) in
+            
+        }
+    }
+    @objc func moyaNet()  {
         self.networking()
     }
     
@@ -81,6 +119,8 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
                 let jsonString = json.rawString()!
                 print(jsonString)
                 if let list = JSONDeserializer<channels>.deserializeFrom(json: json.rawString()) {
+                    self.arrM.removeAllObjects()
+                    self.isAfn = false
                     self.arrM.addObjects(from: list.channels)
                     self.tableview.reloadData()
                 }

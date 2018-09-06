@@ -13,5 +13,7 @@ pod 'AlamofireImage'  #加载图片,类似SD
 pod 'SnapKit'        #布局
 
 pod 'MBProgressHUD'
+pod 'PPNetworkHelper'
+pod 'YYModel'
 
 end
