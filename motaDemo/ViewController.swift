@@ -78,7 +78,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     }
     
     @objc func afnNetWork() {
-        
+        //基于afn封装的PPNETWORK,和OC用法一样,字典转模型用的YYMODEL
         networkManager.default.request(url:频道 , parm: [:], success: { (response) in
             let response = response as! NSDictionary
             let arr = NSArray.yy_modelArray(with: channelModel.self, json: response["channels"] as! [channelModel])
@@ -108,6 +108,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     
      //MARK:网络请求
     func networking() {
+        //MOYA请求的数据,字典转模型采用的是阿里的HANDJSON,个人用起来不是很习惯
         DouBanProvider.request(.channels) { (result) in
             if case let .success(response) = result {
                 //解析数据

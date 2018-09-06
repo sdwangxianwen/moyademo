@@ -10,18 +10,19 @@ import UIKit
 import PPNetworkHelper
 import MBProgressHUD
 
-public let 频道 = "j/app/radio/channels"
 class networkManager {
     static let `default` = networkManager()
     
     func request(url:String,parm:[String:Any],success: @escaping (Any?) -> (),failure: @escaping (Error?) -> ()) {
-        let url = "https://www.douban.com/".appending(url)
+        let url = HOSTAPI.appending(url)
+        MBProgressHUD.showAdded(to: UIApplication.shared.keyWindow!, animated: true)
         PPNetworkHelper.post(url, parameters: parm, success: { (response) in
             success(response)
+            MBProgressHUD.hide(for: UIApplication.shared.keyWindow!, animated: true)
         }) { (error) in
             failure(error)
+            MBProgressHUD.hide(for: UIApplication.shared.keyWindow!, animated: true)
         }
-        
     }
 }
 
