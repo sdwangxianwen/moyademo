@@ -106,7 +106,6 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         self.tableview!.register(UITableViewCell.self,
                                  forCellReuseIdentifier: "SwiftCell")
     }
-    
      //MARK:网络请求
     func networking() {
         //MOYA请求的数据,字典转模型采用的是阿里的HANDJSON,个人用起来不是很习惯
